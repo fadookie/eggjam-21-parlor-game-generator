@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "build": "npm run tsc && /usr/bin/env bash make_build.sh"
   },
   "repository": {
     "type": "git",

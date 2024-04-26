@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "name": "eggjam-21-parlor-game-generator",
+  "description": "Parlor game rules generator for Eggplant Jam #21",
+  "version": "0.0.1",
+  "main": "generator.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "watch": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fadookie/eggjam-21-parlor-game-generator.git"
+  },
+  "author": "Eliot Lash",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fadookie/eggjam-21-parlor-game-generator/issues"
+  },
+  "homepage": "https://github.com/fadookie/eggjam-21-parlor-game-generator#readme"
+}

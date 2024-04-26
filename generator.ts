@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", (e) => {
-  document.getElementById("rules").innerHTML = "foo";
+  document.getElementById("rules")!.innerHTML = "foo";
 });

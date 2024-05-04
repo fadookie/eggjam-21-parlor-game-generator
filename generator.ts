@@ -83,6 +83,9 @@ const playerNoun1Options = [
   'poem'
 ];
 
+const ruleHistory: string[] = [];
+let currentRuleHistoryIndex = -1;
+
 function pickRandom<T>(array: T[]): T {
   return array[_.random(0, array.length - 1)];
 }
@@ -129,6 +132,33 @@ function generateRules() {
 <p>${finalRuleText}</p>`;
 }
 
+function prevRule() {
+  if (currentRuleHistoryIndex > 0) {
+    --currentRuleHistoryIndex;
+    updateRule();
+  }
+}
+
+function nextRule() {
+  if (currentRuleHistoryIndex == ruleHistory.length - 1) {
+    const newRule = generateRules();
+    ruleHistory.push(newRule);
+  }
+  ++currentRuleHistoryIndex;
+  updateRule();
+}
+
+function copyToClipboard() {
+  if (currentRuleHistoryIndex >= 0) {
+    navigator.clipboard.writeText(ruleHistory[currentRuleHistoryIndex]);
+  }
+}
+
+function updateRule() {
+  document.getElementById("rules")!.innerHTML = ruleHistory[currentRuleHistoryIndex];
+  document.getElementById("ruleIndex")!.innerHTML = `Rule ${currentRuleHistoryIndex + 1}/${ruleHistory.length}`;
+}
+
 document.addEventListener("DOMContentLoaded", (e) => {
-  document.getElementById("rules")!.innerHTML = generateRules();
+  nextRule();
 });

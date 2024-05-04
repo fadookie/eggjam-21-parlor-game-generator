@@ -122,15 +122,11 @@ function generateRules() {
   const finalRuleTemplate = _.template(finalRule.template);
   const finalRuleText = finalRuleTemplate(allVariables);
 
-  return `${initialRuleText}
-
-${intermediateRule1Text}
-
-${intermediateRule2Text}
-
-${intermediateRule3Text}
-
-${finalRuleText}`;
+  return `<p>${initialRuleText}</p>
+<p>${intermediateRule1Text}</p>
+<p>${intermediateRule2Text}</p>
+<p>${intermediateRule3Text}</p>
+<p>${finalRuleText}</p>`;
 }
 
 document.addEventListener("DOMContentLoaded", (e) => {

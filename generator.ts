@@ -156,7 +156,7 @@ function copyToClipboard() {
 
 function updateRule() {
   document.getElementById("rules")!.innerHTML = ruleHistory[currentRuleHistoryIndex];
-  document.getElementById("ruleIndex")!.innerHTML = `Rule ${currentRuleHistoryIndex + 1}/${ruleHistory.length}`;
+  document.getElementById("ruleIndex")!.innerHTML = `Game ${currentRuleHistoryIndex + 1}/${ruleHistory.length}`;
 }
 
 document.addEventListener("DOMContentLoaded", (e) => {
